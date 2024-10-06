@@ -1,11 +1,23 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+}
+
+.header {
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add some padding */
+    background-color: #f8f8f8; /* Light background color */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it appears above other content */
 }
 
 .quiz-container {
@@ -16,6 +28,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    margin-top: 70px; /* Space below the fixed header */
+    flex: 1; /* Allow quiz-container to grow */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
 }
 
 .progress-bar {
